@@ -8,12 +8,12 @@ A conceptual, dark-fantasy-themed network speed visualizer. Vibe coded af, but i
 
 
 
-## 🔮 Overview
+Overview
 
 This project simulates the experience of a network speed test using a "Soul's Ascent" metaphor. 
 **Live Demo:** [Insert Link Here]
 
-## ✨ Key Features
+ Key Features
 
 * **Interactive Fire Particle System:** A custom HTML5 Canvas engine that renders fire embers reacting to mouse movement.
   
@@ -32,23 +32,23 @@ This project simulates the experience of a network speed test using a "Soul's As
 * **Glassmorphism UI:** Modern CSS styling using backdrop filters to create a frosted glass look over dynamic backgrounds.
 * **Thematic Audio & Visuals:** synchronized sound effects (they don't work rn, maybe i'll come back and solve the issue) and CSS keyframe animations (camera shake/spiral climb).
 
-## 🛠️ Technologies Used
+  Technologies Used
 
 * **HTML5:** Semantic structure and inline SVG graphics.
 * **CSS3:** CSS Variables, Flexbox/Grid, Keyframe Animations, Backdrop Filter.
 * **JavaScript (ES6+):** Object-Oriented Programming (for particles), DOM manipulation, `requestAnimationFrame`, and mathematical simulation logic.
 
-## 🚀 How to Run
+ How to Run
 
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/OneTwoN-1/Dante-s-Network-Inferno/tree/main](https://github.com/OneTwoN-1/Dante-s-Network-Inferno/tree/main)
+    git clone https://github.com/OneTwoN-1/Dante-s-Network-Inferno/tree/main
     ```
 2.  Navigate to the project directory.
 3.  Open `index.html` in your preferred browser. 
   
 
-## 🎨 Customization
+## Customization
 
 You can tweak the visual theme easily in `style.css` via the root variables
 
