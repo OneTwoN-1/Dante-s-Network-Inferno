@@ -42,7 +42,7 @@ This project simulates the experience of a network speed test using a "Soul's As
 
 1.  Clone the repository:
     ```bash
-   git clone [https://github.com/OneTwoN-1/Dante-s-Network-Inferno.git](https://github.com/OneTwoN-1/Dante-s-Network-Inferno.git)
+   git clone https://github.com/OneTwoN-1/Dante-s-Network-Inferno.git
     ```
 2.  Navigate to the project directory.
 3.  Open `index.html` in your preferred browser. 
