@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dante's Network Inferno</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+      
+        .goblet-container {
+            position: relative; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem auto;
+            width: fit-content;
+        }
+
+       
+        .goblet-float-display {
+            position: absolute;
+            top: 30%;
+            left: 1%;
+            transform: translate(-80%, 90%);
+            text-align: center;
+            z-index: 10;
+            pointer-events: none; 
+        }
+
+        #goblet-speed-val {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem; /* Large text */
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8), 0 0 10px #ff4500;
+            display: block;
+            line-height: 0.9;
+        }
+
+        .goblet-unit {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        
+        #demon-note {
+            display: none; 
+           
+        }
+        #demon-note.show {
+            display: block;
+        }
+    </style>
+</head>
+<body id="inferno-body">
+
+    <div id="inferno-stage">
+        <div class="hell-gates-top"></div>
+        <div class="stairs-bg"></div>
+        <div id="ember-container"></div>
+        <canvas id="fire-canvas"></canvas>
+    </div>
+
+    <div class="glass-container" id="main-ui">
+    <header>
+        <h1>Network <span class="highlight-hell">Inferno</span></h1>
+        <div id="inferno-level">Limbo</div>
+    </header>
+
+    <div class="goblet-container">
+        <span class="scale-label top" style="position:absolute; left:-40px; top:10px; color:#666;">2000</span>
+        <span class="scale-label mid" style="position:absolute; left:-40px; top:50%; color:#666;">1000</span>
+        
+        <svg class="goblet-svg" width="180" height="240" viewBox="0 0 120 180" preserveAspectRatio="xMidYMid meet">
+            <defs>
+                <linearGradient id="lava-grad" x1="0" y1="180" x2="0" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" style="stop-color:#4a0000;" />
+                    <stop offset="50%" style="stop-color:#ff4500;" />
+                    <stop offset="100%" style="stop-color:#ffff00;" />
+                </linearGradient>
+                
+                <mask id="liquid-mask">
+                    <path d="M30,10 L90,10 L85,100 Q85,150 60,150 Q35,150 35,100 Z" fill="white"/>
+                </mask>
+            </defs>
+            
+            <path class="goblet-inside" d="M30,10 L90,10 L85,100 Q85,150 60,150 Q35,150 35,100 Z" fill="rgba(26, 0, 0, 0.8)" />
+            
+            <g mask="url(#liquid-mask)">
+                <g id="liquid-level" style="transform: translateY(150px);">
+                    <path id="lava-wave" d="M0,10 Q30,0 60,10 T120,10 L120,200 L0,200 Z" fill="url(#lava-grad)" />
+                    <rect x="0" y="10" width="120" height="200" fill="url(#lava-grad)" />
+                </g>
+            </g>
+
+            <path class="goblet-outline" d="M25,5 L30,10 L35,100 Q35,160 60,160 Q85,160 85,100 L90,10 L95,5 M50,160 L50,185 M70,160 L70,185 M35,185 L85,185" fill="none" stroke="#4a0000" stroke-width="3" />
+        </svg>
+
+        <div class="goblet-float-display">
+            <span id="goblet-speed-val">0</span>
+            <span class="goblet-unit">Mbps</span>
+        </div>
+    </div>
+
+    <div class="lever-wrapper" onclick="pullLever()">
+        <div class="lever-base"></div>
+        <div id="lever-arm" class="lever-arm">
+            <div class="lever-knob"></div>
+        </div>
+        <div class="lever-label">PULL TO ASCEND</div>
+    </div>
+
+    <div id="status">Ready to Climb</div>
+    <button id="reset-btn" onclick="resetInferno()">Reset</button>
+</div>
+
+    <div id="demon-note">
+        <div class="demon-hand"></div>
+        <div class="parchment">
+            <label>The Verdict:</label>
+            <div id="final-verdict-text" style="font-weight:bold; margin-bottom:10px;">...</div>
+            <div id="speed-value" style="font-size: 1.5rem; font-weight: bold;">0.00</div>
+            <span class="unit">Mbps</span>
+        </div>
+    </div>
+
+    <audio id="rustle-sound" src="https://www.soundjay.com/misc/sounds/paper-crunch-1.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
