@@ -20,13 +20,13 @@ This project simulates the experience of a network speed test using a "Soul's As
 * **SVG Liquid Animation:** A dynamic "lava" goblet that fills based on simulated data, utilizing SVG gradients and masking
   
 * **Physics-Simulated Data:** The speedometer doesn't just count up; it mimics real network behavior using specific algorithms for "Burst," "Correction," and "Jitter."\\
-  **Phase 1: Exponential Ramp (0% - 20%)**
+  * **Phase 1: Exponential Ramp (0% - 20%)**
      *Principle:* Networks don't start at full speed. They ramp up. A power of 2.5 creates a "slow start, fast finish" curve.
-  **Phase 2: The "Burst" Correction (20% - 60%)**
+  * **Phase 2: The "Burst" Correction (20% - 60%)**
      *Principle:* ISPs often give a "speed burst" at the start of a download (115% of actual speed) and then throttle it down. The code linearly interpolates from `burstSpeed` down to `finalSpeed`.
-  **Phase 3: Stabilization & Wobble (60% - 100%)**
+  * **Phase 3: Stabilization & Wobble (60% - 100%)**
      *Principle:* A real connection is never a straight line. The Sine wave adds a gentle oscillation (breathing effect) around the final number.
-  **Phase 4: Micro-Jitter (Noise)**
+  * **Phase 4: Micro-Jitter (Noise)**
      *Principle:* Adds jagged "noise" to the line so it doesn't look too perfect or robotic.
 
 * **Glassmorphism UI:** Modern CSS styling using backdrop filters to create a frosted glass look over dynamic backgrounds.
@@ -42,7 +42,7 @@ This project simulates the experience of a network speed test using a "Soul's As
 
 1.  Clone the repository:
     ```bash
-    ([https://github.com/OneTwoN-1/Dante-s-Network-Inferno/tree/main](https://github.com/OneTwoN-1/Dante-s-Network-Inferno))
+    [https://github.com/OneTwoN-1/Dante-s-Network-Inferno](https://github.com/OneTwoN-1/Dante-s-Network-Inferno)
     ```
 2.  Navigate to the project directory.
 3.  Open `index.html` in your preferred browser. 
