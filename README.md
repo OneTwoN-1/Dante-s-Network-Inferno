@@ -30,7 +30,7 @@ This project simulates the experience of a network speed test using a "Soul's As
      *Principle:* Adds jagged "noise" to the line so it doesn't look too perfect or robotic.
 
 * **Glassmorphism UI:** Modern CSS styling using backdrop filters to create a frosted glass look over dynamic backgrounds.
-* **Thematic Audio & Visuals:** synchronized sound effects (they don't work rn, maybe i'll come back and solve the issue) and CSS keyframe animations (camera shake/spiral climb).
+* **Thematic Audio & Visuals:** synchronized sound effects  (Note: Audio requires user interaction to bypass modern browser autoplay policies) and CSS keyframe animations (camera shake/spiral climb).
 
   Technologies Used
 
